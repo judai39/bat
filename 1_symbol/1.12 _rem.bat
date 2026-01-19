@@ -12,5 +12,3 @@ chcp 65001
 @REM 小于或等于      leq          less than or equal
 @REM 不等于s          neq          no equal
 if "14" geq "2" (14大于2?因为字符串内元素比较大小只比较第一位往后类推) else echo 14小于2
-
-@REM 第二行注解那里出现了报错提示
