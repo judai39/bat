@@ -1,6 +1,7 @@
 @echo off
 chcp 65001
-@REM 新建文件
+
+@REM 新建文件信息
 (
 echo 这是文件内容
 echo 这是文件内容2
@@ -8,11 +9,15 @@ echo 这是文件内容3
 )>"aaaaa.txt"
 pause
 
-@REM rd/s C:\...  该命令是删除文件,会询问y/n
+@REM echo ...>>filename 追加信息
+echo 这是追加的文件内容>>"aaaaa.txt"
+
+
+@REM rd/s C:\...  该命令是删除文件夹(删除目录下文件使用del),会询问y/n
 @REM echo回复
 @REM 格式：ECHO 回复|命令表达式
 @REM 作用：通过管道命令 | 把“回复”作为输入传导给后面的“命令表达式”，并作为“命令表达式”的输入。
-@REM echo Y | rd /s C:\Users\judai\Desktop\test.txt !!!!!!!!!!!!!rd只能删除文件夹删除文件需要使用del
+@REM echo Y | rd /s C:\Users\judai\Desktop\test.txt
 @REM  /s是删除目录下的所有内容
 
 @REM 设置文件属性(只读.隐藏等等...)
