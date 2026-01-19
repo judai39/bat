@@ -7,6 +7,7 @@ echo 这是文件内容
 echo 这是文件内容2
 echo 这是文件内容3
 )>"aaaaa.txt"
+@REM !!!!这里的>指向的文件一定要加"",否则只会添加第一行的数据
 pause
 
 @REM echo ...>>filename 追加信息

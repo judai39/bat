@@ -2,7 +2,7 @@
 chcp 65001
 
 @REM 基础用法
-::输出hello 换行 world（因为hello,world hello被当成三个片段被执行）
+::输出hello 换行 world 换行 hello（因为hello,world hello被当成三个片段被执行）
 for %%i in (hello,world hello) do echo %%i
 
 
@@ -20,9 +20,11 @@ for %%i in (??.txt) do echo "%%i"
 echo 这是，第、一行。
 echo 这是，第、二行。
 echo 这是，第、三行。
-)>readme.txt
+)>"readme.txt"
 for /f %%i in (readme.txt) do echo %%i&pause
 ::delims切分字符串(delims=，提取所有第一段，的之前的所有字符)
 for /f "delims=，" %%i in (readme.txt) do echo %%i
 ::delims切分字符串(delims=、。提取所有第一段、字符开始到。的之前的字符)
 for /f "delims=、。" %%i in (readme.txt) do echo %%i
+
+del readme.txt
