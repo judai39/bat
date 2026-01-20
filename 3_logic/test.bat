@@ -1,8 +1,13 @@
-@echo off
+@REM @echo off
 setlocal enabledelayedexpansion
 
-for %%f in (.txt) do (
-set filename=%%~nf
-set newfilename=%filename:#=/%
-ren %%~dpfnf %newfilename%
+cd "3_logic"
+echo "this is file">"tes#t.txt"
+for /f "delims=" %%i in ('dir /b *') do (
+set filename=%%~nxi
+set newfilename=!filename:#=-!
+ren %%~dpfxi !newfilename!
 )
+
+pause
+del "tes-t.txt"
