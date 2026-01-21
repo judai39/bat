@@ -2,10 +2,14 @@
 chcp 65001
 
 @REM set设置自定义变量
+::set缺少/a参数是对变量求字符串
 set var=abcd
+set empty_str1=""
+set empty_str2=   
 echo %var%
-if %var% equ abcd (echo var的值为abcd) else echo var的值不为abcd
-if defined var (echo var的值不为空) else echo var的值为空
+::set添加/a参数是对变量求数值
+set /a num=10
+echo %num%
 
 @REM set处理字符串
 ::字符串替换
